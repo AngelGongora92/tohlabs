@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toh Labs | Software de Alta Velocidad & Soluciones de Inteligencia Artificial</title>
+  <meta name="description" content="Desarrollo web de alto rendimiento, agentes de voz con IA y asistentes empresariales para escalar tu negocio." />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            toh: {
+              dark: '#070C10',
+              surface: '#0E1720',
+              card: '#121E2A',
+              border: 'rgba(255, 255, 255, 0.08)',
+              turquoise: '#00D1C5',
+              cyanGlow: '#00F0D8',
+              emerald: '#108A72',
+              terracotta: '#E07A5F',
+              muted: '#8E9EA8'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Efecto de cuadrícula y destellos de fondo estilo Big Tech */
+    .bg-grid-pattern {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+    .glow-radial {
+      background: radial-gradient(circle 500px at 50% 20%, rgba(0, 209, 197, 0.12), transparent 70%);
+    }
+    .glow-card:hover {
+      border-color: rgba(0, 209, 197, 0.35);
+      box-shadow: 0 0 25px rgba(0, 209, 197, 0.1);
+    }
+  </style>
+</head>
+
+<body class="bg-toh-dark text-slate-100 font-sans antialiased selection:bg-toh-turquoise selection:text-black">
+
+  <!-- Glow superior ambiente -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] glow-radial pointer-events-none -z-10"></div>
+
+  <!-- NAVEGACIÓN -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-toh-dark/80 border-b border-toh-border">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-toh-turquoise to-toh-emerald p-[1px]">
+          <div class="w-full h-full bg-toh-dark rounded-[11px] flex items-center justify-center">
+            <i data-lucide="feather" class="w-5 h-5 text-toh-turquoise"></i>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl font-bold tracking-tight text-white flex items-center gap-1">
+            toh<span class="text-toh-turquoise">labs</span>
+          </span>
+          <span class="text-[10px] tracking-widest text-toh-muted uppercase font-medium">Digital & AI Systems</span>
+        </div>
+      </a>
+
+      <!-- Menú Enlaces -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-toh-muted">
+        <a href="#destacados" class="hover:text-white transition">Innovación IA</a>
+        <a href="#catalogo" class="hover:text-white transition">Servicios</a>
+        <a href="#metodologia" class="hover:text-white transition">Metodología</a>
+        <a href="#contacto" class="hover:text-white transition">Contacto</a>
+      </nav>
+
+      <!-- Botones de Acción -->
+      <div class="flex items-center gap-4">
+        <a href="https://wa.me/529996182892?text=Hola%20Toh%20Labs,%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto" 
+           target="_blank"
+           class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-toh-turquoise/10 border border-toh-turquoise/30 text-toh-turquoise text-sm font-semibold hover:bg-toh-turquoise hover:text-black transition duration-200">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>WhatsApp Directo</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-24 pb-20 px-6 bg-grid-pattern overflow-hidden">
+    <div class="max-w-5xl mx-auto text-center">
+      <!-- Badge de Innovación -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur mb-8">
+        <span class="w-2 h-2 rounded-full bg-toh-turquoise animate-pulse"></span>
+        <span class="text-xs font-medium text-slate-300">Inteligencia Artificial Aplicada a Negocios Reales</span>
+      </div>
+
+      <!-- Título Principal -->
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1] mb-6">
+        Software de alta velocidad y <br class="hidden sm:inline" />
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-toh-turquoise via-white to-toh-emerald">
+          Agentes de IA que operan por ti
+        </span>
+      </h1>
+
+      <p class="max-w-2xl mx-auto text-lg text-toh-muted font-normal mb-10 leading-relaxed">
+        Creamos presencia web con rendimiento 95+ e integramos telefonía con voz inteligente, recomendadores de menú y asistentes privados de documentos para PyMEs y corporativos.
+      </p>
+
+      <!-- Botones Principales de Contacto -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://wa.me/529996182892?text=Hola,%20solicito%20una%20sesi%C3%B3n%20de%20diagn%C3%B3stico%20para%20mi%20empresa" 
+           target="_blank"
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-toh-turquoise text-black font-semibold text-base shadow-lg shadow-toh-turquoise/20 hover:bg-toh-cyanGlow transition">
+          <i data-lucide="phone-call" class="w-5 h-5"></i>
+          Agendar Diagnóstico Gratuito
+        </a>
+        <a href="mailto:contacto@tohlabs.mx" 
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl border border-toh-border bg-white/[0.02] text-white font-medium hover:bg-white/[0.06] transition">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+          contacto@tohlabs.mx
+        </a>
+      </div>
+
+      <!-- Indicadores de Calidad -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20 pt-10 border-t border-white/5 text-left">
+        <div class="p-4 rounded-xl bg-white/[0.01]">
+          <div class="text-2xl font-bold text-white">95+</div>
+          <div class="text-xs text-toh-muted mt-1">Google PageSpeed Score</div>
+        </div>
+        <div class="p-4 rounded-xl bg-white/[0.01]">
+          <div class="text-2xl font-bold text-toh-turquoise">24/7</div>
+          <div class="text-xs text-toh-muted mt-1">Atención Telefónica con IA</div>
+        </div>
+        <div class="p-4 rounded-xl bg-white/[0.01]">
+          <div class="text-2xl font-bold text-white">48 - 72h</div>
+          <div class="text-xs text-toh-muted mt-1">Lanzamiento de Landing Pages</div>
+        </div>
+        <div class="p-4 rounded-xl bg-white/[0.01]">
+          <div class="text-2xl font-bold text-toh-emerald">100%</div>
+          <div class="text-xs text-toh-muted mt-1">Privacidad de Datos Corporativos</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: LOS 3 SERVICIOS ESTRELLA DE IA -->
+  <section id="destacados" class="py-24 px-6 border-t border-toh-border relative">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+        <div>
+          <span class="text-xs font-semibold tracking-widest text-toh-turquoise uppercase">Soluciones Disruptivas</span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-2">Inteligencia Artificial de Impacto Inmediato</h2>
+        </div>
+        <p class="text-toh-muted max-w-md text-sm">
+          Automatizaciones diseñadas para resolver cuellos de botella específicos, no tecnología vacía.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- CARD 1: Agente Telefónico de Voz -->
+        <div class="rounded-2xl border border-toh-border bg-toh-surface p-8 flex flex-col justify-between glow-card transition duration-300 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-toh-turquoise/10 rounded-full blur-3xl pointer-events-none"></div>
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-toh-turquoise/10 border border-toh-turquoise/20 flex items-center justify-center text-toh-turquoise mb-6">
+              <i data-lucide="phone-forwarded" class="w-6 h-6"></i>
+            </div>
+            <div class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-toh-turquoise/10 text-toh-turquoise border border-toh-turquoise/20 mb-3">
+              Para PyMEs con Alto Flujo
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Recepcionista Virtual con Voz Inteligente</h3>
+            <p class="text-toh-muted text-sm leading-relaxed mb-6">
+              Número virtual o desvío configurado con voz natural mexicana que atiende llamadas cuando estás ocupado o fuera de horario. Resuelve dudas y toma reservas.
+            </p>
+            <div class="p-3.5 rounded-xl bg-toh-card border border-white/5 mb-6 text-xs space-y-2">
+              <div class="flex items-center gap-2 text-slate-200">
+                <i data-lucide="check" class="w-4 h-4 text-toh-turquoise"></i>
+                <span>Voz fluida en español de México</span>
+              </div>
+              <div class="flex items-center gap-2 text-slate-200">
+                <i data-lucide="check" class="w-4 h-4 text-toh-turquoise"></i>
+                <span>Envío del resumen directo a WhatsApp</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-white/5">
+            <span class="text-xs text-toh-muted block mb-3">Ideal para restaurantes, consultorios y talleres</span>
+            <a href="https://wa.me/529996182892?text=Quiero%20probar%20el%20demo%20del%20Recepcionista%20Telef%C3%B3nico%20con%20Voz%20IA" 
+               target="_blank" 
+               class="text-sm font-semibold text-toh-turquoise hover:text-white flex items-center gap-1.5 transition">
+              Solicitar demostración en audio <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 2: Recomendador de Menús / Catálogos -->
+        <div class="rounded-2xl border border-toh-border bg-toh-surface p-8 flex flex-col justify-between glow-card transition duration-300 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-toh-terracotta/10 rounded-full blur-3xl pointer-events-none"></div>
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-toh-terracotta/10 border border-toh-terracotta/20 flex items-center justify-center text-toh-terracotta mb-6">
+              <i data-lucide="sparkles" class="w-6 h-6"></i>
+            </div>
+            <div class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-toh-terracotta/10 text-toh-terracotta border border-toh-terracotta/20 mb-3">
+              Aumento de Ticket Promedio
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Mesero & Asistente Interactivo de Menú</h3>
+            <p class="text-toh-muted text-sm leading-relaxed mb-6">
+              Barra conversacional embebida en tu menú web. El cliente pide recomendaciones por presupuesto, antojo o restricción ("botana para 4 con $500") y arma su orden.
+            </p>
+            <div class="p-3.5 rounded-xl bg-toh-card border border-white/5 mb-6 text-xs space-y-2">
+              <div class="flex items-center gap-2 text-slate-200">
+                <i data-lucide="check" class="w-4 h-4 text-toh-terracotta"></i>
+                <span>Sugerencias cruzadas (cross-selling)</span>
+              </div>
+              <div class="flex items-center gap-2 text-slate-200">
+                <i data-lucide="check" class="w-4 h-4 text-toh-terracotta"></i>
+                <span>Exporta la comanda armada a WhatsApp</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-white/5">
+            <span class="text-xs text-toh-muted block mb-3">Para cafeterías, bares, restaurantes y boutiques</span>
+            <a href="https://wa.me/529996182892?text=Me%20interesa%20el%20Mesero%20Virtual%20para%20men%C3%BA%20o%20cat%C3%A1logo" 
+               target="_blank" 
+               class="text-sm font-semibold text-toh-terracotta hover:text-white flex items-center gap-1.5 transition">
+              Ver cómo funciona en menú <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 3: RAG Corporativo -->
+        <div class="rounded-2xl border border-toh-border bg-toh-surface p-8 flex flex-col justify-between glow-card transition duration-300 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-toh-emerald/10 rounded-full blur-3xl pointer-events-none"></div>
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-toh-emerald/10 border border-toh-emerald/20 flex items-center justify-center text-toh-emerald mb-6">
+              <i data-lucide="shield-check" class="w-6 h-6"></i>
+            </div>
+            <div class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-toh-emerald/10 text-toh-emerald border border-toh-emerald/20 mb-3">
+              Corporativo & Confidencial
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Asistente Privado de Conocimiento (RAG)</h3>
+            <p class="text-toh-muted text-sm leading-relaxed mb-6">
+              Búsqueda semántica instantánea sobre manuales de operación, políticas de RRHH y contratos. Responde preguntas citando la cláusula y página exacta de origen.
+            </p>
+            <div class="p-3.5 rounded-xl bg-toh-card border border-white/5 mb-6 text-xs space-y-2">
+              <div class="flex items-center gap-2 text-slate-200">
+                <i data-lucide="check" class="w-4 h-4 text-toh-emerald"></i>
+                <span>Cifrado y sin exponer datos a terceros</span>
+              </div>
+              <div class="flex items-center gap-2 text-slate-200">
+                <i data-lucide="check" class="w-4 h-4 text-toh-emerald"></i>
+                <span>Acelera semanas de capacitación interna</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-white/5">
+            <span class="text-xs text-toh-muted block mb-3">Para colegios, maquilas, despachos y corporativos</span>
+            <a href="https://wa.me/529996182892?text=Solicito%20informaci%C3%B3n%20sobre%20el%20Asistente%20RAG%20de%20Conocimiento%20Corporativo" 
+               target="_blank" 
+               class="text-sm font-semibold text-toh-emerald hover:text-white flex items-center gap-1.5 transition">
+              Consultar viabilidad técnica <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO MAESTRO DE SERVICIOS -->
+  <section id="catalogo" class="py-24 px-6 bg-toh-surface/50 border-t border-toh-border">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <span class="text-xs font-semibold tracking-widest text-toh-turquoise uppercase">Líneas de Negocio</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Catálogo de Soluciones Toh Labs</h2>
+        <p class="text-toh-muted mt-4 text-base">
+          Infraestructura digital moderna adaptada a cada etapa de madurez de tu empresa.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Bloque 1: Web de Alta Velocidad -->
+        <div class="p-8 rounded-2xl bg-toh-card border border-toh-border">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-toh-turquoise">
+              <i data-lucide="layout" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">1. Presencia Digital de Alta Velocidad</h3>
+          </div>
+          <ul class="space-y-4 text-sm text-toh-muted">
+            <li class="flex items-start gap-3">
+              <i data-lucide="zap" class="w-4 h-4 text-toh-turquoise mt-1 shrink-0"></i>
+              <div>
+                <strong class="text-white block font-medium">Landing Pages One-Page (48-72h)</strong>
+                Rendimiento Google PageSpeed 95+, botón de WhatsApp inmediato y SEO local configurado.
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="globe" class="w-4 h-4 text-toh-turquoise mt-1 shrink-0"></i>
+              <div>
+                <strong class="text-white block font-medium">Sitios Corporativos Multi-página</strong>
+                Estructura modular para colegios, instituciones y firmas con descarga de folletos y formularios.
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="server" class="w-4 h-4 text-toh-turquoise mt-1 shrink-0"></i>
+              <div>
+                <strong class="text-white block font-medium">Planes WaaS (Web as a Service)</strong>
+                Hospedaje de alta disponibilidad, dominio propio, correos corporativos y mantenimiento mensual.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Bloque 2: Catálogos para Comercios -->
+        <div class="p-8 rounded-2xl bg-toh-card border border-toh-border">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-toh-terracotta">
+              <i data-lucide="qr-code" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">2. Catálogos & Soluciones Comerciales</h3>
+          </div>
+          <ul class="space-y-4 text-sm text-toh-muted">
+            <li class="flex items-start gap-3">
+              <i data-lucide="coffee" class="w-4 h-4 text-toh-terracotta mt-1 shrink-0"></i>
+              <div>
+                <strong class="text-white block font-medium">Menús Digitales QR Ultra-rápidos</strong>
+                Apertura instantánea en celulares sin obligar a tus comensales a descargar archivos PDF pesados.
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="shopping-bag" class="w-4 h-4 text-toh-terracotta mt-1 shrink-0"></i>
+              <div>
+                <strong class="text-white block font-medium">Catálogo E-commerce Ligero</strong>
+                Fichas con botón de pedido directo a WhatsApp o pasarela de pago para comercios locales.
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="calendar-check" class="w-4 h-4 text-toh-terracotta mt-1 shrink-0"></i>
+              <div>
+                <strong class="text-white block font-medium">Agente de Agendamiento en Calendario</strong>
+                Confirmación y sincronización de citas automáticamente con Google Calendar.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Bloque 3: IA para PyMEs -->
+        <div class="p-8 rounded-2xl bg-toh-card border border-toh-border">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-toh-turquoise">
+              <i data-lucide="bot" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">3. Inteligencia Artificial para PyMEs</h3>
+          </div>
+          <ul class="space-y-4 text-sm text-toh-muted">
+            <li class="flex items-start gap-3">
+              <i data-lucide="mic" class="w-4 h-4 text-toh-turquoise mt-1 shrink-0"></i>
+              <div>
+                <strong class="text-white block font-medium">Telefonía con Voz Artificial</strong>
+                Responde llamadas con lenguaje natural y envía el lead en tiempo real a tu WhatsApp.
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="utensils" class="w-4 h-4 text-toh-turquoise mt-1 shrink-0"></i>
+              <div>
+                <strong class="text-white block font-medium">Mesero Virtual Interactivo</strong>
+                Recomendador de platillos y paquetes según presupuesto y gustos del cliente en mesa.
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="message-square" class="w-4 h-4 text-toh-turquoise mt-1 shrink-0"></i>
+              <div>
+                <strong class="text-white block font-medium">Bots de WhatsApp 24/7</strong>
+                Respuestas inmediatas a precios, horarios y catálogos sin dejar prospectos en visto.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Bloque 4: Corporativo B2B -->
+        <div class="p-8 rounded-2xl bg-toh-card border border-toh-border">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-toh-emerald">
+              <i data-lucide="building" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">4. Soluciones B2B & Automatización</h3>
+          </div>
+          <ul class="space-y-4 text-sm text-toh-muted">
+            <li class="flex items-start gap-3">
+              <i data-lucide="database" class="w-4 h-4 text-toh-emerald mt-1 shrink-0"></i>
+              <div>
+                <strong class="text-white block font-medium">Asistente Privado RAG</strong>
+                Centralización y búsqueda semántica en políticas, normativas y contratos sin alucinaciones.
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="git-merge" class="w-4 h-4 text-toh-emerald mt-1 shrink-0"></i>
+              <div>
+                <strong class="text-white block font-medium">Automatización de Flujos y CRM</strong>
+                Conexión automática de formularios web con Google Sheets, sistemas internos y alertas de equipo.
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="lock" class="w-4 h-4 text-toh-emerald mt-1 shrink-0"></i>
+              <div>
+                <strong class="text-white block font-medium">Auditoría y Arquitectura Segura</strong>
+                Pruebas de software exhaustivas (QA) para garantizar estabilidad antes de salir a producción.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: CONTACTO & CONVERSIÓN -->
+  <section id="contacto" class="py-24 px-6 border-t border-toh-border relative">
+    <div class="max-w-4xl mx-auto rounded-3xl bg-gradient-to-b from-toh-card to-toh-dark border border-white/10 p-8 sm:p-14 text-center relative overflow-hidden">
+      <div class="absolute inset-0 bg-grid-pattern opacity-50 pointer-events-none"></div>
+      
+      <div class="relative z-10">
+        <span class="inline-block px-3 py-1 rounded-full bg-toh-turquoise/10 border border-toh-turquoise/30 text-toh-turquoise text-xs font-semibold mb-6">
+          Comienza Hoy
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-6">
+          Hablemos de cómo modernizar tus procesos
+        </h2>
+        <p class="text-toh-muted text-base max-w-xl mx-auto mb-10 leading-relaxed">
+          Ya sea que necesites una landing page lista en 72 horas o implementar un agente de voz con IA en tu negocio, te asesoramos de forma directa.
+        </p>
+
+        <!-- Botones de Contacto Inmediato -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <!-- WhatsApp con el número indicado -->
+          <a href="https://wa.me/529996182892?text=Hola%20Toh%20Labs,%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto" 
+             target="_blank"
+             class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-[#25D366] text-black font-bold text-base hover:bg-[#20ba5a] transition shadow-lg shadow-[#25D366]/20">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+            WhatsApp: 999 618 2892
+          </a>
+
+          <!-- Correo tohlabs.mx -->
+          <a href="mailto:contacto@tohlabs.mx" 
+             class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white/5 border border-white/15 text-white font-medium text-base hover:bg-white/10 transition">
+            <i data-lucide="mail" class="w-5 h-5"></i>
+            contacto@tohlabs.mx
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a href="https://wa.me/529996182892?text=Hola%20Toh%20Labs,%20quiero%20m%C3%A1s%20informaci%C3%B3n" 
+     target="_blank" 
+     class="fixed bottom-6 right-6 z-50 p-4 rounded-full bg-[#25D366] text-black shadow-2xl hover:scale-110 active:scale-95 transition duration-200 flex items-center justify-center group"
+     aria-label="Contactar por WhatsApp">
+    <i data-lucide="message-circle" class="w-6 h-6"></i>
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="py-12 px-6 border-t border-toh-border bg-toh-dark text-xs text-toh-muted">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-white tracking-tight">toh<span class="text-toh-turquoise">labs</span></span>
+        <span>•</span>
+        <span>Mérida, Yucatán, México</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="mailto:contacto@tohlabs.mx" class="hover:text-white transition">contacto@tohlabs.mx</a>
+        <a href="https://wa.me/529996182892" class="hover:text-white transition">+52 (999) 618-2892</a>
+      </div>
+      <div>
+        &copy; 2026 Toh Labs. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Inicializar Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
